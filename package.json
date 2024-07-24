@@ -1,0 +1,26 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test:lint": "eslint .",
+    "test": "vitest run --coverage && pnpm run /^test:/",
+    "start": "nodemon index.js"
+  },
+  "author": "Anna Sokolova <a.sokolova.dev@gmail.com>",
+  "license": "MIT",
+  "description": "URL shortener",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.0.4",
+    "eslint": "^8.57.0",
+    "eslint-config": "github:a-sokolova-dev/eslint-config",
+    "nodemon": "^3.1.4",
+    "vitest": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "nanoid": "^5.0.7"
+  }
+}
