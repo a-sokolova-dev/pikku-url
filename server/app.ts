@@ -1,8 +1,23 @@
-import express from 'express';
+import dotenv from "dotenv";
+import express from "express";
+
+import connectDB from "./config/db";
+import routes from "./routes";
+
+dotenv.config();
+
 const app = express();
 
+connectDB();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(routes);
+
 // Server Setup
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => {
-  console.log(`Server is running at PORT ${PORT}`);
+  // eslint-disable-next-line no-console
+  console.log(`> Ready on http://localhost:${PORT}`);
 });
