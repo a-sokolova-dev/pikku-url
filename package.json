@@ -12,10 +12,12 @@
   "license": "MIT",
   "description": "URL shortener",
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@vitest/coverage-v8": "^2.0.4",
     "eslint": "^8.57.0",
     "eslint-config": "github:a-sokolova-dev/eslint-config",
     "nodemon": "^3.1.4",
+    "typescript": "^5.5.4",
     "vitest": "^2.0.4"
   },
   "dependencies": {
