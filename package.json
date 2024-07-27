@@ -2,10 +2,11 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test:lint": "eslint server/*.ts",
     "test": "vitest run --coverage && pnpm run /^test:/",
-    "dev": "nodemon server/app.ts"
+    "dev": "nodemon --exec node --loader ts-node/esm server/app.ts"
   },
   "author": "Anna Sokolova <a.sokolova.dev@gmail.com>",
   "license": "MIT",
@@ -26,6 +27,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.5.1",
-    "nanoid": "^3.3.7"
+    "nanoid": "^5.0.7"
   }
 }

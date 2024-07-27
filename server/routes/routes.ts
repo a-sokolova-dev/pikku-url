@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import Url from "../models/Url";
-import { generateShortLink } from "../utils";
-import links from "./links";
+import Url from "../models/Url.js";
+import { generateShortLink } from "../utils/index.js";
+import links from "./links.js";
 
 const router = Router();
 

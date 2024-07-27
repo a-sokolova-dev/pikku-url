@@ -1,7 +1,7 @@
 import { Handler } from "express";
 
-import Url from "../models/Url";
-import { generateId, generateShortLink } from "../utils";
+import Url from "../models/Url.js";
+import { generateId, generateShortLink } from "../utils/index.js";
 import { CreateLinkReq } from "./types";
 
 export const create: Handler = async (req: CreateLinkReq, res) => {

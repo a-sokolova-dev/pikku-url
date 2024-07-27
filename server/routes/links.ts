@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import * as link from "../handlers/links";
+import * as link from "../handlers/links.js";
 
 const router = Router();
 
