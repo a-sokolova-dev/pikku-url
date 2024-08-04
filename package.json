@@ -1,32 +1,22 @@
 {
-  "name": "url-shortener",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "pikku-url",
+  "license": "MIT",
+  "author": "Anna Sokolova <a.sokolova.dev@gmail.com>",
+  "description": "URL shortener",
   "type": "module",
   "scripts": {
-    "test:lint": "eslint server/*.ts",
-    "test": "vitest run --coverage && pnpm run /^test:/",
-    "dev": "nodemon --exec node --loader ts-node/esm server/app.ts"
+    "test": "pnpm run -r --include-workspace-root /^test:/",
+    "start": "pnpm run -r start",
+    "test:js": "eslint ."
   },
-  "author": "Anna Sokolova <a.sokolova.dev@gmail.com>",
-  "license": "MIT",
-  "description": "URL shortener",
+  "workspaces": [
+    "server",
+    "web"
+  ],
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@vitest/coverage-v8": "^2.0.4",
-    "eslint": "^8.57.0",
-    "eslint-config": "github:a-sokolova-dev/eslint-config",
-    "eslint-plugin-perfectionist": "^3.0.0",
-    "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^7.17.0",
-    "vitest": "^2.0.4"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mongoose": "^8.5.1",
-    "nanoid": "^5.0.7"
+    "eslint": "^8.57.0",
+    "eslint-plugin-perfectionist": "^3.0.0",
+    "typescript-eslint": "^7.17.0"
   }
 }
