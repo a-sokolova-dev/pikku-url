@@ -7,16 +7,20 @@
   "scripts": {
     "test": "pnpm run -r --include-workspace-root /^test:/",
     "start": "pnpm run -r start",
-    "test:js": "eslint ."
+    "format": "pnpm run -r --include-workspace-root /^format:/",
+    "format:prettier": "prettier -w server/**/*.{ts,json} *.{js,json}",
+    "test:js": "eslint .",
+    "test:format": "prettier --check **/*.{js,ts,json} *.{js,json}"
   },
   "workspaces": [
     "server",
     "web"
   ],
   "devDependencies": {
-    "typescript": "^5.5.4",
     "eslint": "^8.57.0",
     "eslint-config": "github:a-sokolova-dev/eslint-config",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
     "typescript-eslint": "^7.17.0"
   }
 }
