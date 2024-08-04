@@ -16,7 +16,7 @@
   "devDependencies": {
     "typescript": "^5.5.4",
     "eslint": "^8.57.0",
-    "eslint-plugin-perfectionist": "^3.0.0",
+    "eslint-config": "github:a-sokolova-dev/eslint-config",
     "typescript-eslint": "^7.17.0"
   }
 }
