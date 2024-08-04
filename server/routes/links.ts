@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router } from 'express'
 
-import * as link from "../handlers/links.js";
+import * as link from '../handlers/links.js'
 
-const router = Router();
+const router = Router()
 
-router.post("/", link.create);
+router.post('/', link.create)
 
-export default router;
+export default router

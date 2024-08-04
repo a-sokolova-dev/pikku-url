@@ -1,16 +1,16 @@
-import dotenv from "dotenv";
-import mongoose from "mongoose";
+import dotenv from 'dotenv'
+import mongoose from 'mongoose'
 
-dotenv.config();
+dotenv.config()
 
 const connectDB = async (): Promise<void> => {
   try {
-    await mongoose.connect(process.env.MONGO_URI!);
+    await mongoose.connect(process.env.MONGO_URI!)
     // eslint-disable-next-line no-console
-    console.log("Database Connected");
+    console.log('Database Connected')
   } catch (err) {
-    process.exit(1);
+    process.exit(1)
   }
-};
+}
 
-export default connectDB;
+export default connectDB
