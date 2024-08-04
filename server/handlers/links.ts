@@ -1,27 +1,27 @@
-import { Handler } from "express";
+import type { Handler } from "express";
 
 import Url from "../models/Url.js";
 import { generateId, generateShortLink } from "../utils/index.js";
-import { CreateLinkReq } from "./types";
+import type { CreateLinkReq } from "./types";
 
 export const create: Handler = async (req: CreateLinkReq, res) => {
-  const { longUrl } = req.body;
+  let { longUrl } = req.body;
 
-  const urlId = generateId();
-  const shortUrl = generateShortLink(urlId);
+  let urlId = generateId();
+  let shortUrl = generateShortLink(urlId);
 
   try {
     // Check if the long / short url pair already exists in our db
     let url = await Url.findOne({
-      longUrl,
+      longUrl
     });
 
     if (url) return res.json({ shortUrl: url.shortUrl });
 
     url = new Url({
-      longUrl,
-      shortUrl,
       date: new Date(),
+      longUrl,
+      shortUrl
     });
 
     await url.save();

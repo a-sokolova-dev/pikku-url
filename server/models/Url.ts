@@ -1,17 +1,17 @@
 import mongoose from 'mongoose';
 
 const UrlSchema = new mongoose.Schema({
-  longUrl: {
+  createdAt: {
+    default: Date.now,
     type: String,
+  },
+  longUrl: {
     required: true,
+    type: String,
   },
   shortUrl: {
-    type: String,
     required: true,
-  },
-  createdAt: {
     type: String,
-    default: Date.now,
   },
 });
 

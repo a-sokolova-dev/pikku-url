@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const connectDB = async () => {
+const connectDB = async (): Promise<void> => {
   try {
     await mongoose.connect(process.env.MONGO_URI!);
     // eslint-disable-next-line no-console
