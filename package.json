@@ -8,9 +8,9 @@
     "test": "pnpm run -r --include-workspace-root /^test:/",
     "start": "pnpm run -r start",
     "format": "pnpm run -r --include-workspace-root /^format:/",
-    "format:prettier": "prettier -w server/**/*.{ts,json} *.{js,json}",
+    "format:prettier": "prettier -w **/*.{js,ts,tsx,json} *.{js,json}",
     "test:js": "eslint .",
-    "test:format": "prettier --check **/*.{js,ts,json} *.{js,json}"
+    "test:format": "prettier --check **/*.{js,ts,tsx,json} *.{js,json}"
   },
   "workspaces": [
     "server",
